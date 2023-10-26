@@ -1,9 +1,12 @@
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import NavBar from './component/NavBar'
+import Footer from './component/Footer'
+import { GlobalContextProvider } from '@/../state-management/ReactContext/GlobalContext'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
-  weight: '500',
+  weight: ['400', '700'],
 })
 
 export const metadata = {
@@ -13,8 +16,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={poppins.className}>
+          <GlobalContextProvider>
+            <NavBar />
+              <main>
+                {children}
+              </main>
+            <Footer />
+          </GlobalContextProvider>
+        </body>
+      </html>
   )
 }
