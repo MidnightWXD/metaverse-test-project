@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const NavBar = () => {
     return (
-        <header className='bg-[#EEEEEE] flex justify-evenly h-[140px] top-0 sticky'>
+        <header className='bg-[#EEEEEE] flex justify-evenly h-[140px] top-0 sticky z-10'>
             <div className='mt-[60px]'>
                 <Image
                     src='/Layer_1.svg'
@@ -16,7 +16,7 @@ const NavBar = () => {
                 <nav>
                     <ul>
                         <li className='grid grid-cols-2 gap-4'>
-                            <a href='#'>CANNABIS</a>
+                            <a href='#'>MARIJUANA</a>
                             <a href="#">MUSHROOM</a>
                         </li>
                     </ul>
