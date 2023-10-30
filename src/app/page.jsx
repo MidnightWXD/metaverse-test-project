@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import OrderTour from './component/OrderTour'
+import ReviewHighlightCard from './component/ReviewHighlightCard'
+import DraggableContainer from './component/DraggableContainer'
 
 export default function Home() {
   return (
     <>
-      <section className="min-h-screen bg-[url('/Background.svg')] bg-[length:100%_auto] bg-[#F47820] bg-no-repeat bg-top mt-[-120px] relative">
+      <section className="min-h-screen bg-[url('/Background.svg')] bg-[length:100%_auto] bg-[#F47820] bg-no-repeat bg-[0px_-120px] relative">
         <div className='absolute top-[200px] leading-[78px] left-[140px]'>
           <div className='italic text-[52px] font-[700] ml-[80px]'>Canada’s</div>
           <div className='font-[600] text-[52px] ml-[120px]'>Best Spot to</div>
@@ -117,7 +119,7 @@ export default function Home() {
           <div className='w-[663px] h-[445px] rounded-[30px] bg-white absolute top-[110px] left-[120px] p-6 ring-[13px] ring-gray-200/40 ring-offset-4 transform flex flex-col justify-center items-center'>
             <div className='font-[700] pl-4 text-[40px] leading-[60px]'>Lorem ipsum dolor sit a sectetur <span className='text-[#F47820]'>adipiscing</span> elit sed do <span className='text-[#F47820]'>eiusmod</span> tempor </div>
             <div className='my-8 pl-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
-            <button className='w-[90%] h-[50px] bg-black text-white text-[20px] leading-[30px] rounded-[10px]'>Lorem ipsum dolor sit amet</button>
+            <button className='w-[90%] h-[50px]  text-white text-[20px] leading-[30px] rounded-[10px]'>Lorem ipsum dolor sit amet</button>
           </div>
           <Image
             src={'/GitarBg.svg'}
@@ -128,19 +130,79 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='px-[30px]'>
+      <section className='px-[60px] mt-[5em]'>
         <div className='w-full h-auto bg-[#EEEEEE] rounded-[30px]'>
-          <h1 className='text-[700] text-[40px] leading-[60px]'><span className='text-[#F47820]'>Some Awesome</span><br />Review Highlights</h1>
-          <div className='flex'>
-            <div className="w-[30px] h-[30px] rounded-full bg-[url('/RightArrowIcon.svg')] bg-no-repeat bg-center bg-contain"></div>
-            <div className='rounded-[20px] w-[571px] h-[317px] flex justify-center items-center'>
-              <p className='text-[#F47820]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-              <span className=""></span>
-            </div>
-            <div></div>
-            <div className="w-[30px] h-[30px] rounded-full bg-[url('/RightArrowIcon.svg')] bg-no-repeat bg-center bg-contain"></div>
+          <h1 className='font-[700] text-[40px] leading-[60px] px-[50px] pt-[30px] ml-[80px]'><span className='text-[#F47820]'>Some Awesome</span><br />Review Highlights</h1>
+          <ReviewHighlightCard/>
+          <div className='flex p-[50px] ml-[80px]'>
+              <span className='w-[10px] h-[10px] rounded-full bg-[#F47820] outline outline-1 outline-[#F47820] outline-offset-1 mr-3 hover:cursor-pointer'></span>
+              <span className='w-[10px] h-[10px] rounded-full bg-gray-300 mr-3 hover:cursor-pointer'></span>
+              <span className='w-[10px] h-[10px] rounded-full bg-gray-300 mr-3 hover:cursor-pointer'></span>
           </div>
-          <div></div>
+        </div>
+      </section>
+      <section className='px-[60px] py-[120px]'>
+        <h1 className='font-[700] text-[40px] leading-[60px]'>Top Perks for you</h1>
+        <div className='h-[486px] w-full m-[20px_auto]'>
+          <DraggableContainer>
+            <div className='flex justify-end items-center opacity-0 hover:opacity-100 w-full h-full absolute'>
+              <Image
+                src={'/RightArrowIcon.svg'}
+                alt='Right Arrow Icon'
+                width={60}
+                height={60}
+                className="hover:cursor-pointer z-10"
+              />
+            </div>
+            <div className="perk-container flex-shrink-0 relative rounded-[21px] w-[426px] shadow-[0_4px_39px_0px_rgba(0,0,0,0.04)] bg-[url('/VisionaryBrew3.svg')] bg-no-repeat">
+              <div className='flex flex-col justify-between absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100'>
+                <ul className="flex flex-col items-end space-y-2 list-none mr-[30px] mt-[30px]">
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/Wishing-list.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/shopping-basket.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                </ul>
+                <div className='flex justify-between bg-[#FFDAC0] rounded-b-[21px] h-[18%] p-[20px]'>
+                  <div className='text-[20px] text-[700] leading-[30px] text-[#F47820]'>Visionary Brew Magic <br /> Mushroom Tea</div>
+                  <div className='text-[40px] leading-[60px] text-center font-[700] text-[#F47820] mr-6'>$25</div>
+                </div>
+              </div>
+            </div>
+            <div className="perk-container flex-shrink-0 relative rounded-[21px] w-[426px] shadow-[0_4px_39px_0px_rgba(0,0,0,0.04)] bg-[url('/DriedMushroomMultiple.svg')]">
+              <div className='flex flex-col justify-between absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100'>
+                <ul className="flex flex-col items-end space-y-2 list-none mr-[30px] mt-[30px]">
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/Wishing-list.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/shopping-basket.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                </ul>
+                <div className='flex justify-between bg-[#FFDAC0] rounded-b-[21px] h-[18%] p-[20px]'>
+                  <div className='text-[20px] text-[700] leading-[30px] text-[#F47820]'>Visionary Brew Magic <br /> Mushroom Tea</div>
+                  <div className='text-[40px] leading-[60px] text-center font-[700] text-[#F47820] mr-6'>$25</div>
+                </div>
+              </div>
+            </div>
+            <div className="perk-container flex-shrink-0 relative rounded-[21px] w-[426px] shadow-[0_4px_39px_0px_rgba(0,0,0,0.04)] bg-[url('/Purepsilocybin.svg')] ">
+              <div className='flex flex-col justify-between absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100'>
+                  <ul className="flex flex-col items-end space-y-2 list-none mr-[30px] mt-[30px]">
+                    <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/Wishing-list.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                    <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/shopping-basket.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                  </ul>
+                  <div className='flex justify-between bg-[#FFDAC0] rounded-b-[21px] h-[18%] p-[20px]'>
+                    <div className='text-[20px] text-[700] leading-[30px] text-[#F47820]'>Visionary Brew Magic <br /> Mushroom Tea</div>
+                    <div className='text-[40px] leading-[60px] text-center font-[700] text-[#F47820] mr-6'>$25</div>
+                  </div>
+                </div>
+              </div>
+            <div className="perk-container flex-shrink-0 relative rounded-[21px] w-[426px] shadow-[0_4px_39px_0px_rgba(0,0,0,0.04)] bg-[url('/Dames.svg')]">
+              <div className='flex flex-col justify-between absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100'>
+                <ul className="flex flex-col items-end space-y-2 list-none mr-[30px] mt-[30px]">
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/Wishing-list.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                  <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/shopping-basket.svg')] bg-center bg-[length:20px_20px] rounded-lg bg-no-repeat p-3"></li></a>
+                </ul>
+                <div className='flex justify-between bg-[#FFDAC0] rounded-b-[21px] h-[18%] p-[20px]'>
+                  <div className='text-[20px] text-[700] leading-[30px] text-[#F47820]'>Visionary Brew Magic <br /> Mushroom Tea</div>
+                  <div className='text-[40px] leading-[60px] text-center font-[700] text-[#F47820] mr-6'>$25</div>
+                </div>
+              </div>
+            </div>
+          </DraggableContainer>
         </div>
       </section>
       <OrderTour/>

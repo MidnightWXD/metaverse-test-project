@@ -2,7 +2,7 @@ import React from "react";
 
 const OrderTour = () => {
     return (
-        <section className="w-full h-auto mt-[180px] p-[30px]">
+        <section className="w-full h-auto mt-[180px] py-[30px] px-[60px]">
             <h1 className="text-center font-[700] text-[40px] leading-[60px]">How your order works</h1>
             <h2 className="text-center leading-[30px] text-[20px]">let’s get your started</h2>
             <div className="flex justify-evenly my-[80px]">
