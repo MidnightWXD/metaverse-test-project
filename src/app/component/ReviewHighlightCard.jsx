@@ -13,7 +13,7 @@ const ReviewHighlightCard = ({ review }) => {
                     className="hover:cursor-pointer"
                 />
                 <div className='flex flex-col justify-evenly rounded-[20px]  items-center bg-white p-[60px] w-[35vw]'>
-                    <p className='text-[#F47820] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p className='text-primary text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     <Image
                         src={'/UserIcon2.svg'}
                         alt='UserIcon2'
@@ -26,7 +26,7 @@ const ReviewHighlightCard = ({ review }) => {
             </div>
             <div className="flex shrink gap-7 items-center">
                 <div className='flex flex-col justify-evenly rounded-[20px]  items-center bg-white p-[60px] w-[35vw]'>
-                    <p className='text-[#F47820] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p className='text-primary text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                     <Image
                         src={'/UserIcon1.svg'}
                         alt='UserIcon1'

@@ -31,7 +31,7 @@ export default function DraggableContainer({ children }) {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className='flex flex-shrink-0 min-w-0 overflow-hidden w-full h-full gap-6 relative'
+      className='flex flex-shrink-0 min-w-0 overflow-hidden w-full h-full gap-6'
     >
       {children}
     </div>

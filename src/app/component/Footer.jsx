@@ -37,8 +37,8 @@ const Footer = () => {
                 <div className='mx-auto'>
                     <h5 className="mb-4 text-lg font-bold">Follow Us</h5>
                     <ul className="flex items-center space-y-2 list-none">
-                        <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/Facebook.svg')] bg-center bg-[length:20px_20px] rounded-full bg-no-repeat p-3"></li></a>
-                        <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-[#F47820] bg-[url('/InstagramIcon.svg')] bg-center bg-[length:15px_15px] rounded-full bg-no-repeat p-3 mb-2 ml-2"></li></a>
+                        <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-primary bg-[url('/Facebook.svg')] bg-center bg-[length:20px_20px] rounded-full bg-no-repeat p-3"></li></a>
+                        <a href="#" className="text-gray-400 hover:text-black"><li className="w-[20px] h-[20px] bg-primary bg-[url('/InstagramIcon.svg')] bg-center bg-[length:15px_15px] rounded-full bg-no-repeat p-3 mb-2 ml-2"></li></a>
                     </ul>
                 </div>
             </div>
@@ -56,6 +56,8 @@ const Footer = () => {
                     src="/PositiveSSL_SectigoTag.svg"
                     width={100}
                     height={50}
+                    alt="PositiveSSL Sectigo Tag"
+                    className='w-auto h-auto'
                 />
             </div>
         </footer>

@@ -4,7 +4,9 @@ import { useGlobal } from '@/hook/global';
 
 const GlobalContext = createContext({
     productNav: false,
-    setProductNav: () => {}
+    setProductNav: () => {},
+    isHover : '0', 
+    setIsHover: () => {},
 });
 
 export function useGlobalContext() {

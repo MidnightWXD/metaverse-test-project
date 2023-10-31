@@ -20,13 +20,14 @@
   background: linear-gradient(104.08deg, #F47820 -79.48%, rgba(244, 120, 32, 0) 215.65%);
 }
 
-.perk-container {
+.product-container {
   background-position: center top;
   background-size: 100% 100%;
   transition: background-size 1s, background-position 1s;
 }
 
-.perk-container:hover {
+.product-container:hover {
   background-position: center bottom;
   background-size: 120% 120%;
 }
+
