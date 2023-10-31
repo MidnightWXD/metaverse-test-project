@@ -9,34 +9,39 @@ import { useGlobalContext } from '@/../state-management/ReactContext/GlobalConte
 export default function Home() {
 
   const { 
-    productNav, 
     isHover,
     setIsHover,
-    setProductNav 
   } = useGlobalContext();
 
   return (
     <>
-      <section className="min-h-screen h-[1600px] bg-[url('/Background.svg')] bg-primary bg-[length:100%_auto] bg-no-repeat bg-top mt-[-5em] relative">
+      <section 
+        className="min-h-screen h-[1600px] max-[1560px]:h-[1500px] max-[1920px]:h-[1700px] max-[2200px]:h-[1960px] 
+        max-[2400px]:h-[2100px] max-2k:h-[2300px] max-[3280px]:h-[2600px] max-[3840px]:h-[2900px] min-[3840px]:h-[3400px] 
+        bg-[url('/Background.svg')] bg-primary bg-[length:100%_auto] bg-no-repeat bg-top mt-[-5em] relative "
+      >
         <div className='flex justify-evenly relative'>
           <div className='flex flex-col justify-between pl-[3em]'>
-            <div className='leading-[78px] mt-[10em] absolute'>
-              <div className='italic text-[52px] font-[700] ml-[80px]'>Canada’s</div>
-              <div className='font-[600] text-[52px] ml-[120px]'>Best Spot to</div>
-              <div className='text-[52px] font-[800]'>Buy <span className='text-primary'>Shroms</span> Online!</div>
+            <div className='leading-[78px] mt-[4em] text-[52px] absolute min-[3840px]:text-[5em]'>
+              <div className='italic font-[700] ml-[80px]'>Canada’s</div>
+              <div className='font-[600] ml-[120px]'>Best Spot to</div>
+              <div className='font-[800]'>Buy <span className='text-primary'>Shroms</span> Online!</div>
             </div>
-            <div className='border rounded-[20px] w-[375px] h-[200px] mt-[30em] mb-[4em] onsale-card text-white flex items-center justify-center relative opacity-[83%]'>
+            <div 
+              className='border rounded-[20px] w-[375px] h-[200px] min-[3840px]:w-[940px] min-[3840px]:h-[500px]
+              mt-[30em] min-[3840px]:mt-[70em] mb-[4em] onSale-card text-white flex items-center justify-center relative opacity-[83%]'
+            >
               <div className='ml-6'>
-                <div className='text-[30px] font-[600] leading-[38px]'>Get 20% off <br />Your 1st Order</div>
-                <div className='text-[20px] font-[400] leading-[30px]'>You get over <span className='text-[20px] font-[700]'>$99</span></div>
-                <div className='text-[15px] font-[400] leading-[22.5px] mt-5'>Coupon Code <span className='font-[600] w-[80px] h-[30px] bg-primary rounded p-1'>FIRST20</span></div>
-                <Image 
-                  src='/DicountIcon.svg'
-                  alt='Discount Icon'
-                  width={112}
-                  height={133}
-                  className='absolute top-0 left-0 w-auto h-auto transform -translate-x-1/2 translate-y-9'
-                />
+                <div className='text-[30px] min-[3840px]:text-[75px] font-[600] min-[3840px]:leading-[95px]'>Get 20% off <br />Your 1st Order</div>
+                <div className='text-[20px] min-[3840px]:text-[50px] font-[400] min-[3840px]:leading-[75px]'>You get over <span className='text-[20px] font-[700]'>$99</span></div>
+                <div className='text-[15px] min-[3840px]:text-[37.5px] font-[400] min-[3840px]:leading-[57px] mt-5'>Coupon Code <span className='font-[600] w-[80px] h-[30px] bg-primary rounded p-1'>FIRST20</span></div>
+                  <Image 
+                    src='/DicountIcon.svg'
+                    alt='Discount Icon'
+                    width={112}
+                    height={133}
+                    className='absolute top-0 left-0 w-auto h-auto min-[3840px]:w-[280px] min-[3840px]:h-[335px] min-[3840px]:top-[30px] transform -translate-x-1/2 translate-y-9'
+                  />
               </div>
             </div>
           </div>
@@ -65,7 +70,7 @@ export default function Home() {
             <button className='absolute -left-[10%] bottom-[15%] w-[155px] h-[50px] rounded-[10px] bg-primary font-[600] text-[15px] leading-[22.5px] text-center text-white'>Shop Now</button>
           </div>
         </div>
-        <div className='font-[700] text-[40px] leading-[60px] text-center mt-[100px] text-white'>Top Categories</div>
+        <div className='font-[700] text-[40px] leading-[60px] text-center mt-[12em] max-[1960px]:mt-[8em] max-[1560px]:mt-[3em] text-white'>Top Categories</div>
         <div className='w-full h-auto rounded-[30px] flex justify-center absolute -bottom-7 px-[30px]'>
           <div className='w-full h-[563px] rounded-[30px] bg-white flex justify-evenly items-center  drop-shadow-lg'>
             <div className='w-[294px] h-[461px] rounded-[30px] bg-[#FFDAC0] favoriteMushroom p-4 relative'>
@@ -123,12 +128,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <section className='mt-[100px]'>
         <div className='flex justify-between px-[166px]'>
           <div className='font-[700] text-[40px] leading-[60px] text-right'>Getting to <br />Knowing <span className='font-[500] text-primary'>us</span></div>
           <div className='text-[20px] leading-[30px] w-[556px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
         </div>
-        <div className="bg-[url('/Rectangle.svg')] bg-center bg-no-repeat bg-contain h-[650px] mt-[60px] relative">
+        <div className="bg-[url('/Rectangle.svg')] bg-center bg-no-repeat bg-[length:auto_100%] h-[650px] mt-[60px] min-[2560px]:h-[1000px] relative">
           <div className='w-[663px] h-[445px] rounded-[30px] bg-white absolute top-[110px] left-[120px] p-6 ring-[13px] ring-gray-200/40 ring-offset-4 transform flex flex-col justify-center items-center'>
             <div className='font-[700] pl-4 text-[40px] leading-[60px]'>Lorem ipsum dolor sit a sectetur <span className='text-primary'>adipiscing</span> elit sed do <span className='text-primary'>eiusmod</span> tempor </div>
             <div className='my-8 pl-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</div>
@@ -137,9 +143,9 @@ export default function Home() {
           <Image
             src={'/GitarBg.svg'}
             alt='Gitar'
-            width={600}
-            height={600}
-            className='absolute right-[20px] -top-[120px] h-auto w-auto'
+            width={500}
+            height={500}
+            className='absolute right-[9em] -top-[120px] h-[500px] w-[500px] min-[2560px]:h-[800px] min-[2560px]:w-[800px]'
           />
         </div>
       </section>
@@ -234,7 +240,9 @@ export default function Home() {
           </DraggableContainer>
         </div>
       </section>
-      <OrderTour/>
+      <div className='px-[10vw]'>
+        <OrderTour/>
+      </div>
     </>
   )
 }

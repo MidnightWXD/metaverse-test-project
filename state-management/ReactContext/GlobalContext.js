@@ -3,8 +3,6 @@ import { createContext, ReactNode, useContext } from 'react';
 import { useGlobal } from '@/hook/global'; 
 
 const GlobalContext = createContext({
-    productNav: false,
-    setProductNav: () => {},
     isHover : '0', 
     setIsHover: () => {},
 });

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useGlobalContext } from '../../../state-management/ReactContext/GlobalContext'
+import { redirect } from 'next/navigation'
 
 const NavBar = () => {
     const [ categoryNav, setCategoryNav ] = useState(false);
@@ -10,14 +11,16 @@ const NavBar = () => {
         <header className='bg-[#EEEEEE] top-0 sticky z-10 mb-[20px]'>
             <div className={`h-[140px] max-md:h-[100px] relative mx-[10vw] ${categoryNav&&'border-b-2 border-[#969696]'}`}>
                 <div className='mt-[50px] fixed max-lg:w-[159px] max-lg:h-[56.25px] max-md:w-[106px] max-md:h-[37.5px] max-md:mt-[50px]'>
-                    <Image
-                        src='/Layer_1.svg'
-                        alt='Canalife Logo'
-                        width={212}
-                        height={75}
-                        priority={true}
-                        className='object-scale-down'
-                    />
+                    <a href='/'>
+                        <Image
+                            src='/Layer_1.svg'
+                            alt='Canalife Logo'
+                            width={212}
+                            height={75}
+                            priority={true}
+                            className='object-scale-down hover:cursor-pointer'
+                        />
+                    </a>
                 </div>
                 <div className='mt-[85px] flex items-center fixed left-[30vw] max-xl:left-[33vw] max-md:mt-[65px] max-md:left-[28vw]'>
                     <nav>

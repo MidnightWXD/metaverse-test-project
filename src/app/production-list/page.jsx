@@ -36,11 +36,11 @@ const Page = () => {
             <section>
                 <h1 className="text-[40px] font-[400] leading-[60px] text-left py-[5vw]">Explore Some <span className="font-[700] text-primary">Edibles</span></h1>
                 <div className="flex flex-row">
-                    <div className="text-left rounded-[70px] bg-reason-container w-[871px] h-[352px] basis-2/3 relative">
+                    <div className="text-left rounded-[70px] bg-reason-container h-[352px] basis-2/3 relative">
                         <div className="flex flex-col justify-evenly h-full w-[60%]">
                             <div className="basis-2/3 flex flex-col justify-center items-center">
                                 <div>
-                                    <h1 className="font-[600] text-[35px] leading-[52.5px]">Tomorrows Reason Why</h1>
+                                    <h1 className="font-[600] text-[30px] leading-[52.5px]">Tomorrows Reason Why</h1>
                                     <h2 className="font-[400] text-[20px] leading-[30px]">Dosing Protocol</h2>
                                 </div>
                             </div>
@@ -52,19 +52,17 @@ const Page = () => {
                                 alt="reason"
                                 width={100}
                                 height={100}
-                                className="absolute bottom-0 right-0 w-auto h-auto"
+                                className="absolute bottom-0 right-0 w-auto h-[352px]"
                             />
                         </div>
                     </div>
-                    <div className="basis-1/3 pl-[40px]">
-                        <Image
-                            src="/BlackBerry.svg"
-                            alt="reason"
-                            width={100}
-                            height={100}
-                            className="w-auto h-auto"
-                        />
-                    </div>
+                    <Image
+                        src="/BlackBerry.svg"
+                        alt="reason"
+                        width={1100}
+                        height={1100}
+                        className="w-full h-[352px] basis-1/3 pl-[20px]"
+                    />
                 </div>
             </section>
             <section className="flex flex-col items-center justify-center">
